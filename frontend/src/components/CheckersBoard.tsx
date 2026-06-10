@@ -33,7 +33,7 @@ export function CheckersBoard({ board, selected, onSelect, disabled }: Props) {
               disabled={disabled || !dark}
             >
               {piece && (
-                <span className={`piece ${piece.player}`}>
+                <span className={`piece ${piece.player} ${piece.king ? "king" : ""}`}>
                   {piece.king ? "♛" : "●"}
                 </span>
               )}
