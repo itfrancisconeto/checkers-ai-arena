@@ -83,15 +83,6 @@ Exemplos de recompensas:
 | Vitória | +100 |
 | Derrota | -100 |
 
-## Como apresentar o projeto
-
-> Desenvolvi uma aplicação web em Ruby on Rails com SPA em React para jogar damas contra uma IA local. A IA utiliza uma rede neural leve com aprendizado por reforço simplificado, ajustando suas decisões conforme recebe recompensas positivas ou negativas durante as partidas. A interface mostra esse aprendizado de forma visual, exibindo experiências aprendidas, confiança, exploração e evolução das recompensas.
-
 ## Observações
 
 Este é um MVP didático. A IA não tem o objetivo de ser uma engine profissional de damas, mas sim demonstrar arquitetura web, regras de negócio, Docker, SPA e aprendizado incremental local.
-
-
-## Correção aplicada: Rails Host Authorization
-
-Em desenvolvimento, o Rails foi configurado com `config.hosts.clear` para permitir que o proxy do Vite encaminhe chamadas para `http://backend:3000`. Sem essa configuração, o Rails 8 pode bloquear as chamadas internas do Docker com `Blocked hosts: backend:3000`, retornando HTTP 403 no frontend.
