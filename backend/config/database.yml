@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV.fetch("DATABASE_HOST", "localhost") %>
+  username: <%= ENV.fetch("DATABASE_USERNAME", "checkers") %>
+  password: <%= ENV.fetch("DATABASE_PASSWORD", "checkers") %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
+
+development:
+  <<: *default
+  database: <%= ENV.fetch("DATABASE_NAME", "checkers_ai_development") %>
+
+test:
+  <<: *default
+  database: checkers_ai_test
+
+production:
+  <<: *default
+  database: <%= ENV.fetch("DATABASE_NAME", "checkers_ai_production") %>
