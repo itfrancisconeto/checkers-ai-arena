@@ -4,6 +4,8 @@ Projeto web simples com **Ruby on Rails API**, **React SPA**, **Docker**, **Post
 
 A IA roda no navegador e utiliza uma rede neural pequena com aprendizado por reforço simplificado. A interface mostra o aprendizado incremental de forma visual para um público leigo.
 
+![Checkers AI Arena interface](docs/images/checkers-ai-arena.png)
+
 ## Como rodar
 
 Na pasta do projeto:

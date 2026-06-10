@@ -6794,3 +6794,17 @@ Processing by Api::V1::GamesController#play as */*
 Completed 200 OK in 25ms (Views: 0.7ms | ActiveRecord: 11.5ms (5 queries, 0 cached) | GC: 0.9ms)
 
 
+Started POST "/api/v1/games" for 172.27.0.4 at 2026-06-10 18:42:49 +0000
+Processing by Api::V1::GamesController#create as */*
+  Parameters: {"game" => {}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN /*action='create',application='CheckersAiArena',controller='games'*/[0m
+  ↳ app/controllers/api/v1/games_controller.rb:13:in 'Api::V1::GamesController#create'
+  [1m[36mGame Create (7.9ms)[0m  [1m[32mINSERT INTO "games" ("board_state", "status", "current_turn", "winner", "created_at", "updated_at") VALUES ('[[null,{"player":"ai","king":false},null,{"player":"ai","king":false},null,{"player":"ai","king":false},null,{"player":"ai","king":false}],[{"player":"ai","king":false},null,{"player":"ai","king":false},null,{"player":"ai","king":false},null,{"player":"ai","king":false},null],[null,{"player":"ai","king":false},null,{"player":"ai","king":false},null,{"player":"ai","king":false},null,{"player":"ai","king":false}],[null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null],[{"player":"human","king":false},null,{"player":"human","king":false},null,{"player":"human","king":false},null,{"player":"human","king":false},null],[null,{"player":"human","king":false},null,{"player":"human","king":false},null,{"player":"human","king":false},null,{"player":"human","king":false}],[{"player":"human","king":false},null,{"player":"human","king":false},null,{"player":"human","king":false},null,{"player":"human","king":false},null]]', 'in_progress', 'human', NULL, '2026-06-10 18:42:49.900529', '2026-06-10 18:42:49.900529') RETURNING "id" /*action='create',application='CheckersAiArena',controller='games'*/[0m
+  ↳ app/controllers/api/v1/games_controller.rb:13:in 'Api::V1::GamesController#create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT /*action='create',application='CheckersAiArena',controller='games'*/[0m
+  ↳ app/controllers/api/v1/games_controller.rb:13:in 'Api::V1::GamesController#create'
+  [1m[36mMove Load (0.7ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = 5 ORDER BY "moves"."created_at" ASC /*action='create',application='CheckersAiArena',controller='games'*/[0m
+  ↳ app/serializers/game_serializer.rb:13:in 'Enumerable#map'
+Completed 201 Created in 20ms (Views: 0.2ms | ActiveRecord: 10.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
